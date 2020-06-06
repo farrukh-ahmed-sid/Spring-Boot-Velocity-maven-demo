@@ -1,0 +1,29 @@
+<h1>Index</h1>
+ 
+<h2>Department list</h2>
+
+<table border="1">
+	<tr>
+	 <th>Dept No</th>
+	 <th>Dept Name</th>
+	</tr>
+	#foreach($dept in $departments)
+	  #set ($variable=$dept.id)
+	  <tr>
+	   #if($variable==1)
+		 <td>First</td>
+	   #else
+	    <td>Second</td>
+	   #end
+	   <td>$dept.id</td>
+	   <td>$dept.name</td>
+	  </tr>
+	#end
+	
+	#set($array = [0..10])
+	
+	#foreach($i in $array)
+		<p>$i<p/>
+	#end
+	
+</table>
